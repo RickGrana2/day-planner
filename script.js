@@ -26,3 +26,16 @@ var currentHour = moment().format('H')
 console.log(currentHour)
 
 // var textBox1 = $('box1')
+$(".time-block").each(function() {
+for(i = 0; i < workHour.length; i++){
+    if(workHour[i] < currentHour){
+        $(this).addClass("past")
+    } else if (workHour[i] === currentHour){
+        $(this).addClass("present")
+    } else if (workHour[i] === currentHour){
+        $(this).addClass("future")
+}
+console.log(currentHour)
+console.log(workHour[i])
+console.log($(this))
+}})
