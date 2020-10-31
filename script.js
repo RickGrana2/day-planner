@@ -12,3 +12,17 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 
+const currentDay = document.getElementById("currentDay")
+function updateTime(){
+    const now = moment().format('LLLL');
+    currentDay.textContent = now
+}
+setInterval(updateTime, 1000);
+updateTime();
+
+var workHour = [0,1,2,3,4,5,6,7,8,9]
+
+var currentHour = moment().format('H')
+console.log(currentHour)
+
+// var textBox1 = $('box1')
